@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'DotGothic16', 'Microsoft JhengHei';
+  cursor: url(./img/sword.png), auto;
+}
+
+#main {
+  background-image: url(./img/background.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* 對話框 */
+.header {
+  font-size: 50px;
+  width: 98%;
+  backdrop-filter: brightness(30%);
+  color: whitesmoke;
+  border: 5px solid whitesmoke;
+  border-radius: 8px;
+  margin: 1%;
+  display: flex;
+  padding: 1%;
+}
+
+.header>img {
+  margin: auto 0;
+}
+
+#sentence {
+  padding-left: 2%;
+}
+
+.triangle {
+  font-size: 25px;
+  animation: blink 1.3s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent
+  }
+
+  50% {
+    color: whitesmoke
+  }
+
+  ;
+}
+
+/* 內容 */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.hearts {
+  display: flex;
+}
+
+#ht1,
+#ht2,
+#ht3:hover {
+  cursor: url(./img/water.png), auto;
+}
+
+/* 時間 */
+#time {
+  text-align: right;
+  font-size: 50px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 1px gray;
+  height: 10vh;
+  margin: 10px 0;
+}
+
+/* 控制背景音樂播放 */
+.music {
+  display: flex;
+  justify-content: space-between;
+}
+
+.music>button {
+  background-color: #D9913C;
+  border: 0;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 5px 35px;
+}
+
+.music>button:hover {
+  box-shadow: 1px 1px 2px gray;
+}
+
+.music>button:active {
+  background-color: #2A4C65;
+}
+
+/* 人物 */
+#hero {
+  margin: 0 1% 1%;
+  position: absolute;
+}
+
+#monster {
+  margin: 0 1% 1%;
+  position: absolute;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 攻擊數 */
+#hit {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 15px;
+  color: rgb(0, 0, 0, 0);
+  font-weight: bolder;
+  font-family: 'Press Start 2P';
+}
+
+#hit2 {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 15px;
+  color: red;
+  font-weight: bolder;
+  font-family: 'Press Start 2P';
+}
+
+/* 重新開始 */
+.reset {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+#reset {
+  background-color: #D9913C;
+  width: 200px;
+  border: 0;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 5px 35px;
+  text-align: center;
+  color: whitesmoke;
+  letter-spacing: 5px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Time</title>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="main" onload="currentTime()" onselectstart="return false" id="main">
+
+  <!-- 對話框 -->
+  <header class="header">
+
+    <img src="./img/knight.png" alt="騎士">
+
+    <p id="sentence">
+      hello world ▼
+    </p>
+
+  </header>
+
+  <!-- 中間內容 -->
+  <div class="content">
+
+    <!-- 效果音 -->
+    <audio id="effect">
+      <source src="./audio/effect.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="effJump">
+      <source src="./audio/jump.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="effHeart">
+      <source src="./audio/heart.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="effWin">
+      <source src="./audio/win.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 命 -->
+    <div class="hearts">
+      <div id="heart1" onclick="heartFun1()">
+        <img src="./img/heart.png" alt="heart" id="ht1">
+      </div>
+      <div id="heart2" onclick="heartFun2()">
+        <img src="./img/heart.png" alt="heart" id="ht2">
+      </div>
+      <div id="heart3" onclick="heartFun3()">
+        <img src="./img/heart.png" alt="heart" id="ht3">
+      </div>
+    </div>
+
+    <!-- 右邊區域 -->
+    <div class="rightSide">
+
+      <!-- 控制音樂 -->
+      <div class="music">
+        <audio id="audio">
+          <source src="./audio/Mysterious Dungeon.wav" type="audio/mpeg">
+        </audio>
+        <button id="play" onclick="playFun()">
+          <img src="./img/volumW.png" alt="開啟背景音樂">
+        </button>
+        <button id="stop" onclick="stopFun()">
+          <img src="./img/muteW.png" alt="關閉背景音樂">
+        </button>
+      </div>
+
+      <!-- 時間 -->
+      <div id="time">
+
+      </div>
+
+      <div class="reset">
+        <button id="reset">重新開始</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <!-- 人物 -->
+    <div id="hero">
+      <img src="./img/hero.gif" alt="人物">
+    </div>
+
+
+    <div id="monster" onclick="effectFun()" onmousedown="effStopFun()">
+      <p id="hit">Hit 0</p>
+      <img src="./img/monsterL.gif" alt="monster">
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

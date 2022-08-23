@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./img/icon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', 'DotGothic16', 'Microsoft JhengHei';
+        }
+
+        .main {
+            background-image: url(./img/home.png);
+            width: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header h1 {
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 30vh auto 0;
+            letter-spacing: 0.3em;
+            animation:
+                typing 10s steps(35, end)
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+
+            ;
+        }
+
+        .box {
+            width: 36vh;
+            height: 17vh;
+            margin: 10vh auto 0;
+            backdrop-filter: brightness(80%);
+            padding: 1%;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box>a {
+            padding: 3% 0;
+            text-decoration: none;
+            color: black;
+        }
+
+
+        a:hover {
+            background-color: rgba(168, 168, 168, 0.3);
+            padding: 3% 2%;
+        }
+
+        a:hover::before {
+            content: "> ";
+        }
+    </style>
+</head>
+
+<body class="main" onselectstart="return false">
+
+    <audio id="effect">
+        <source src="./audio/select.mp3" type="audio/mpeg" autoplay="false" muted="true">
+    </audio>
+
+    <header>
+        <h1>Adventure-Time</h1>
+    </header>
+
+    <div class="box">
+        <a href="./main.html" onmouseenter="effectFun()" onmouseleave="effectStopFun()">START</a>
+        <a href="#" onmouseenter="effectFun()" onmouseleave="effectStopFun()">CONTINUE</a>
+        <a href="#" onmouseenter="effectFun()" onmouseleave="effectStopFun()">EXIT</a>
+    </div>
+
+    <script>
+        function effectFun() {
+            let effect = document.getElementById('effect');
+            effect.play();
+        }
+        function effectStopFun() {
+            let effect = document.getElementById('effect');
+            effect.pause();
+            effect.currentTime = 0;
+        }
+    </script>
+</body>
+
+</html>
